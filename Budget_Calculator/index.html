@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget app</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body class="jumbotron justify-content-center">
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1>BUDGET APP</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5 col-12 border border-success rounded m-3 p-5">
+                <h3>Please Enter Your Budget</h3>
+                <form action="">
+                    <div class="input-group">
+                        <input id="budget-data" type="text" class="form-control">
+                    </div>
+                    <button type="button" onclick=BugetManupulation() class="btn btn-outline-success mt-3">calculate</button>
+                </form>
+            </div>
+            <div class="col-lg-6 col-12">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-4 col-12">
+                            <h3>BUDGET</h3>
+                            <i class="far fa-money-bill-alt fa-5x"></i>
+                            <p><i class="fas fa-dollar-sign fa-3x"></i><span id="budget" style="font-size: 36px;">0</span></p>
+                        </div>
+                        <div class="col-sm-4 col-12">
+                            <h3>EXPENSES</h3>
+                            <i class="fas fa-credit-card fa-5x"></i>
+                            <p><i class="fas fa-dollar-sign fa-3x"></i><span id="expense" style="font-size: 36px;">0</span></p>
+                        </div>
+                        <div class="col-sm-4 col-12">
+                            <h3>BALANCE</h3>
+                            <i class="fas fa-dollar-sign fa-5x"></i>
+                            <p><i class="fas fa-dollar-sign fa-3x"></i><span id="balance" style="font-size: 36px;">0</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <!-- left -->
+            <div class="col-lg-5 col-12 border border-danger rounded m-3 p-5">
+                <form action="">
+                    <h3>Please Enter Your Expense</h3>
+                    <div class="input-group">
+                        <input id="expTitleData" type="text" class="form-control">
+                    </div>
+                    <h3>Please Enter Expense Amount</h3>
+                    <div class="input-group">
+                        <input id="expAmountData" type="number" class="form-control">
+                    </div>
+
+                    <button type="button" onclick=expManupulation() class="btn btn-outline-danger mt-3">Add Expense</button>
+                </form>
+            </div>
+            <!-- left end -->
+            <!-- right -->
+            <div class="col-lg-6 col-12">
+                <div class="container">
+                    <table class="table" id="table">
+                        <thead>
+                            <tr>
+                                <th>S no.</th>
+                                <th>expense title</th>
+                                <th>expense value</th>
+                            </tr>
+                        </thead>
+                        <tbody id="table-body">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- right end -->
+        </div>
+    </div>
+
+    <script src="./index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
